@@ -56,7 +56,7 @@ if __name__ == "__main__":
     torch.backends.cudnn.benchmark = False
 
     clip_model = "/content/drive/MyDrive/2.Vinbig/00.FIQA/RN50.pt"
-    clip_weights = "/content/drive/MyDrive/2.Vinbig/00.FIQA/CLIB-FIQA.ipynb"
+    clip_weights = "/content/drive/MyDrive/2.Vinbig/00.FIQA/CLIB-FIQA_R50.pth"
     image_path = "/content/drive/MyDrive/2.Vinbig/00.FIQA/Image/1.jpg"
 
     model = backboneSet(clip_model)
