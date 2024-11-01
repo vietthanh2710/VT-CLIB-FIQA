@@ -89,7 +89,7 @@ def img_tensor(imgPath):
 if __name__ == '__main__':
     # data_path = '/kaggle/input/casia-webface/casia-webface'
     data_path = '/kaggle/input/d/ntl0601/casia-webface/casia-webface'
-    outfile_path = "/kaggle/working/"
+    outfile_path = "/kaggle/working"
     dlib_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/shape_predictor_68_face_landmarks.dat"
     mfn_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/MFN_Factors.pth"
     fr_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/fr_weight.pth"                                                # the FR backbone checkpoint training via CR-FIQA
