@@ -95,6 +95,7 @@ if __name__ == '__main__':
     header_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/header_weight.pth"                                            # the header checkpoint training via CR-FIQA
 
     datatxt, id_dict, peop_num = get_image_paths(data_path)
+    print(peop_num)
     predictor = dlib.shape_predictor(dlib_weight)
     detector = dlib.get_frontal_face_detector() 
     
