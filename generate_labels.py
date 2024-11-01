@@ -87,12 +87,12 @@ def img_tensor(imgPath):
     return data
 
 if __name__ == '__main__':
-    data_path = './'
-    outfile_path = "./"
-    dlib_weight = "./weights/shape_predictor_68_face_landmarks.dat"
-    mfn_weight = "./weights/MFN_Factors.pth"
-    fr_weight = "./"                                                # the FR backbone checkpoint training via CR-FIQA
-    header_weight = "./"                                            # the header checkpoint training via CR-FIQA
+    data_path = '/kaggle/input/casia-webface/casia-webface'
+    outfile_path = "/kaggle/working/"
+    dlib_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/shape_predictor_68_face_landmarks.dat"
+    mfn_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/MFN_Factors.pth"
+    fr_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/fr_weight.pth"                                                # the FR backbone checkpoint training via CR-FIQA
+    header_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/header_weight.pth"                                            # the header checkpoint training via CR-FIQA
 
     datatxt, id_dict, peop_num = get_image_paths(data_path)
     predictor = dlib.shape_predictor(dlib_weight)
