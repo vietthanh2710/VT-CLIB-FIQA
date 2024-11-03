@@ -143,7 +143,8 @@ if __name__ == '__main__':
             id = torch.tensor(id_dict[image_path.split('/')[-2]]).cuda().to(torch.long).unsqueeze(dim=0)
             _, _, ccs, nnccs = fr_header(fr_net(tensor_data)[0], id)
             qs = ccs / nnccs
-            QUALITY = qs.cpu().detach().numpy()
+            temp_quality = qs.cpu().detach().numpy()
+            QUALITY = float(temp_quality[0][0])
             
             out_res = f"{image_path}\t{QUALITY}\t{BLUR}\t{POSE}\t{EXPRESSION}\t{ILLUMINATION}\t{OCCLUSION}"
             outfile.write(out_res+'\n')
