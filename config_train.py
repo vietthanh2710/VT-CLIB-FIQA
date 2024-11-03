@@ -3,7 +3,7 @@ import torchvision.transforms as T
 
 class Config(object):
 # training dataset
-    data_list = f"/kaggle/input/data_list/pytorch/default/1/data_list.txt"
+    data_list = f"/kaggle/input/label-gen/data_list.txt"
     clip_model = '/kaggle/input/clib-fiqa/pytorch/default/1/RN50.pt'
 # save settings
     checkpoints = f"/kaggle/working/checkpoints"   
