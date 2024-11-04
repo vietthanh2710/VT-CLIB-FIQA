@@ -87,8 +87,8 @@ def img_tensor(imgPath):
     return data
 
 if __name__ == '__main__':
-    # data_path = '/kaggle/input/casia-webface/casia-webface'
-    data_path = '/kaggle/input/d/ntl0601/casia-webface/casia-webface'
+    data_path = '/kaggle/input/casia-webface/casia-webface'
+    # data_path = '/kaggle/input/d/ntl0601/casia-webface/casia-webface'
     outfile_path = "/kaggle/working/data_list.txt"
     dlib_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/shape_predictor_68_face_landmarks.dat"
     mfn_weight = "/kaggle/input/clib-fiqa/pytorch/default/1/MFN_Factors.pth"
