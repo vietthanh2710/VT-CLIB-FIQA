@@ -13,10 +13,10 @@ class Config(object):
     pin_memory = True
     num_workers = 12
     batch_size = 32         
-    epoch = 25
+    epoch = 10
     lr = 5e-6
     weight_decay = 0.001
-    Epo_th = 5
-    saveModel_epoch = 5
+    Epo_th = 2
+    saveModel_epoch = 2
 
 config = Config()
