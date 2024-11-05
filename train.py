@@ -320,6 +320,11 @@ if __name__ == "__main__":
     for epoch in range(conf.Epo_th, conf.epoch):
         model = train_clib(model, trainloader, optimizer, scheduler, epoch, criterion, dict_conf)
         scheduler.step()
+        if (epoch+1) == 3:
+            os.makedirs(conf.checkpoints, exist_ok=True)
+            savePath = os.path.join(conf.checkpoints, f"CLIB_Epo{epoch+1}.pth")
+            torch.save(model.state_dict(), savePath)               
+            print(f'Saving model at {conf.checkpoints}')
         if (epoch+1)%conf.saveModel_epoch==0:
             os.makedirs(conf.checkpoints, exist_ok=True)
             savePath = os.path.join(conf.checkpoints, f"CLIB_Epo{epoch+1}.pth")
